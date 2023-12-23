@@ -16,7 +16,7 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
-const locations = [{name: "town square"}];
+const locations = [{ name: "town square", "button text": [] }];
 
 // initialize buttons
 button1.onclick = goStore;
@@ -32,7 +32,7 @@ function goTown() {
   button2.onclick = goCave;
   button3.onclick = fightDragon;
   text.innerText =
-    "You are in the town square. You see a sign that says \"Store\".";
+    'You are in the town square. You see a sign that says "Store".';
 }
 
 function goStore() {
@@ -57,6 +57,4 @@ function buyHealth() {}
 
 function buyWeapon() {}
 
-function update(location) {
-
-}
+function update(location) {}
