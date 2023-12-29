@@ -115,3 +115,11 @@ function buyWeapon() {
 function fightSlime() {}
 
 function fightBeast() {}
+
+function sellWeapon() {
+  if (inventory.length > 1) {
+    gold += 15;
+    goldText.innerText = gold;
+    let currentWeapon = inventory.shift();
+  }
+}
