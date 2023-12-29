@@ -24,6 +24,12 @@ const weapons = [
   { name: "sword", power: 100 },
 ];
 
+const monsters = [
+  { name: "slime", level: 2, health: 15 },
+  { name: "fanged beast", level: 8, health: 60 },
+  { name: "dragon", level: 20, health: 300 },
+];
+
 const locations = [
   {
     name: "town square",
@@ -109,8 +115,6 @@ function buyWeapon() {
     text.innerText = "You already have the most powerful weapon!";
     button2.innerText = "Sell weapon for 15 gold";
     button2.onclick = sellWeapon;
-    text.innerText = "You sold a " + currentWeapon + ".";
-    text.innerText += " In your inventory you have: " + inventory + ".";
   }
 }
 
@@ -123,5 +127,9 @@ function sellWeapon() {
     gold += 15;
     goldText.innerText = gold;
     let currentWeapon = inventory.shift();
+    text.innerText = "You sold a " + currentWeapon + ".";
+    text.innerText += " In your inventory you have: " + inventory + ".";
+  } else {
+    text.innerText = "Don't sell your only weapon!";
   }
 }
